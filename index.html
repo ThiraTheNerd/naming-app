@@ -8,7 +8,46 @@
   <title>Akan Names Application</title>
 </head>
 <body>
-  <div class="jumbotron">
+  <div class="container">
+    <div class="header">
+      <nav id="main-nav" class="nav">
+        <img class="logo" src="images/logo.png">
+        <h1>Know your Akan name today</h1>
+      </nav>  
+    </div>
+    <div class="form">
+      <form name="myForm" class="form" onsubmit="validate();">
+        <div class="form-group">
+          <label for="number">Year of Birth:</label>
+          <input type="number" class="form-control" id="year" placeholder="Year of Birth Eg: 2019 if born in 2019" name="year">
+        </div>
+        <div class="form-group">
+          <label for="month">Month of Birth:</label>
+          <input type="number" class="form-control" id="month" placeholder="Month of Birth" name="month">
+        </div>
+        <div class="form-group">
+          <label for="date">Date of Birth:</label>
+          <input type="number" class="form-control" id="date" placeholder="Date of Birth eg 05 for May" name="date">
+        </div>
+        <div class="form-group">
+          <label for="month">Gender</label><br>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="gender" id="male">&nbsp; Male 
+            </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" name="gender" id="female">&nbsp; Female 
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="findName();">Get Name</button>
+        <br>
+      </form>
+
+    </div>
+    
     <form name="myForm" class="form" onsubmit="validate();">
       <div class="form-group">
         <label for="number">Year of Birth:</label>
