@@ -16,5 +16,11 @@ function validate(){
     document.myForm.month.focus();
     return false;
   } 
-
+  else if( document.myForm.date.value == "" || isNaN( document.myForm.date.value ) || 
+  document.myForm.date.value.length != 2|| document.myForm.date.value > 31 || document.myForm.date.value <= 0) {
+     alert( "Please provide a valid date of birth! any value between 01 - 31." );
+     document.myForm.day.focus() ;
+     return false;
+  }
+  
 }
