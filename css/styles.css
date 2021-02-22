@@ -33,7 +33,7 @@ body{
  h2{
    text-align: center;
    font-weight: bold;
-   color:rgb(255, 255, 255);
+   color:rgb(230, 167, 86);
    font-family: 'Quattrocento', serif;
  }
  .form{
@@ -82,7 +82,7 @@ body{
    margin-top: -10px;
  }
  .card{
-   background: rgb(145, 168, 192);
+   background: rgb(231, 160, 93);
  }
  .card-body{
    color: rgb(0, 0, 0);
