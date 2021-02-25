@@ -1,31 +1,32 @@
-function validateForm(){
-  var year = document.forms["myForm"]["year"].value;
-  var month = document.forms["myForm"]["month"].value;
+function dayCalculator(){
   var date = document.forms["myForm"]["date"].value;
-  var genders = document.getElementsByName("gender");
+  var female = document.forms["myForm"]["female"].checked;
+  var male = document.forms["myForm"]["male"].checked;
+  var actualDay = new Date(date);
+  var day = actualDay.getDay();
+  var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
+  var maleNames = ["Kwasi","Kwadwo","Kwabena","Kwaku","Yaw", "Kofi","Kwame"];
+  var femaleNames = ["Akosua","Adwoa","Abenaa","Akua"," Yaa","Afua","Ama"];
 
-  if (year == "" || year < 1200 || year > 2100){
-    alert("Please input the year value ie 2020");
-    return false;
-  }
 
-  if (month == "" || month <=0 || month >12){
-    alert("Please input a valid month ie 01 for January");
-    return false;
-  }
+  console.log(date);
+  console.log(male);
+  console.log(female);
+  console.log(actualDay);
+  console.log(day);
 
-  if (date == "" || date < 1 || date > 31){
-    alert("PLease enter your date of birth ie 08");
-    return false;
-  }
 
-  function findGender(){
-    for (let gender of genders){
-      if(gender.checked){
-        return gender.value;
-      }
-    }
+  if (male) {
+    alert(
+      `Your AKan name is ${maleNames[day]} You were born on a ${dayNames[day]}`
+    );
   }
-  let myGenderValue = getGender();
-  console.log(myGenderValue);
+  else if (female) {
+    alert(
+      `Your AKan name is ${femaleNames[day]} You were born on a ${dayNames[day]}`
+    );
+  }
+  else{
+    alert("Please enter a valid date of birth");
+  }
 }

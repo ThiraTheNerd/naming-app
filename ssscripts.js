@@ -111,4 +111,42 @@ function findName(){
   getGender();
 }    
 
+function validateForm(){
+  var year = document.forms["myForm"]["year"].value;
+  var month = document.forms["myForm"]["month"].value;
+  var date = document.forms["myForm"]["date"].value;
+  
+
+  if (year == "" || year < 1200 || year > 2100){
+    alert("Please input the year value ie 2020");
+    return false;
+  }
+
+  if (month == "" || month <=0 || month >12){
+    alert("Please input a valid month ie 01 for January");
+    return false;
+  }
+
+  if (date == "" || date < 1 || date > 31){
+    alert("PLease enter your date of birth ie 08");
+    return false;
+  }
+}
+
+  function findGender(){
+    document.getElementsByName("gender").forEach(radio => {
+      if(radio.checked){
+        var gender = radio.value;
+        console.log(gender);
+      }
+    });
+  }
+
+  function dayCalculator(){
+
+    var year = parseInt(document.forms["myForm"]["year"].value);
+    var CC = parseInt(year.substring(0,2));
+
+    console.log(year);
+  }
 
