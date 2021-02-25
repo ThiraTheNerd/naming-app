@@ -30,6 +30,10 @@ body{
    text-shadow: 2px 2px 5px black;
    margin-bottom: 10px;
  }
+ .form-check-inline{
+   margin-top: 150;
+ }
+ 
  h2{
    text-align: center;
    font-weight: bold;
@@ -45,6 +49,7 @@ body{
    font-weight: 600;
    font-size: 18px;
    font-family: 'Quattrocento', serif;
+   margin-top: 65px;
  }
  .form-check-label{
    color: rgb(5, 5, 5);
